@@ -57,7 +57,7 @@ module.exports = {
            { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
         ) 
-       .setImage('https://cdn.discordapp.com/attachments/1150827819547504741/1168917372267151370/standard.gif?ex=65538222&is=65410d22&hm=b4994392f44679da41fc9304eb69deaa3769e136057556deec0db69ae8d33a97&')
+       .setImage('https://media.discordapp.net/attachments/1182663618689515542/1216553533281931384/Z_A_I_I_K_Y_1.gif?ex=660a0944&is=65f79444&hm=0f5be7683d5adec7ed6d964a147e8501e107e701106c4a43a17af37dc9a85678&=&width=1157&height=651')
       const button1 = new ButtonBuilder()
         .setLabel('Discord')
         .setURL('https://discord.gg/MsNYkPPUcp')
