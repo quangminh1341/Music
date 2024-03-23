@@ -33,7 +33,7 @@ module.exports = {
       
       const embed = new EmbedBuilder()
         .setColor('#2f58fe')
-        .setTitle('Your Music, Your Call!!')
+        .setTitle('Z A I I K Y hiện lên và nói')
         .setDescription(queue?.autoplay ? '**✅ Autoplay ON**' : '**❌ Autoplay OFF**')
         
       
