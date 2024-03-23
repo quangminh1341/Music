@@ -155,7 +155,7 @@ module.exports = {
           .setAuthor({
             name: 'Album Created Sucessfully',
             iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1215554404527116288/7762-verified-blue.gif',
-            url: 'https://discord.gg/FUEHs7RCqz'
+            url: 'https://discord.gg/MsNYkPPUcp'
           })
   .setDescription(`Hey <@${interaction.member.id}>, your album has been created successfully! 🎉`)
   .setTimestamp();
@@ -214,7 +214,7 @@ await interaction.editReply({
           .setAuthor({
             name: 'Album Deleted Sucessfully',
             iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1215554404527116288/7762-verified-blue.gif',
-            url: 'https://discord.gg/FUEHs7RCqz'
+            url: 'https://discord.gg/MsNYkPPUcp'
           })
   .setDescription(`Hey <@${interaction.member.id}>, your album has been Deleted successfully! ✨`)
   .setTimestamp();
@@ -255,10 +255,10 @@ await interaction.editReply({
        .setAuthor({
           name: 'Song Added to Your Album',
           iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1213430944007061574/6943_Verified.gif',
-          url: 'https://discord.gg/FUEHs7RCqz'
+          url: 'https://discord.gg/MsNYkPPUcp'
         })
         .setDescription(`Hey <@${interaction.member.id}>, your song has been Added successfully! ✨`)
-        .setFooter({ text: 'YouTube - RTX GAMING' })
+        .setFooter({ text: 'Chill with Z A I I K Y' })
         await interaction.reply({
   content: '',
   embeds: [ loadingembed ] 
@@ -324,7 +324,7 @@ await interaction.editReply({
           .setAuthor({
             name: 'Song Removed Sucessfully',
             iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1215554404527116288/7762-verified-blue.gif',
-            url: 'https://discord.gg/FUEHs7RCqz'
+            url: 'https://discord.gg/MsNYkPPUcp'
           })
   .setDescription(`Hey <@${interaction.member.id}>, your song has been Removed successfully! ✨`)
   .setTimestamp();
@@ -404,7 +404,7 @@ await interaction.editReply({
            .setAuthor({
           name: 'Album Songs',
           iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1213422313035407360/8218-alert.gif',
-          url: 'https://discord.gg/FUEHs7RCqz'
+          url: 'https://discord.gg/MsNYkPPUcp'
         })
             .setThumbnail(interaction.user.displayAvatarURL({ size: 2048, dynamic: true }))
             .setColor(client.config.embedColor) 
@@ -484,7 +484,7 @@ await interaction.editReply({
               .setThumbnail(interaction.user.displayAvatarURL({ size: 2048, dynamic: true }))
               .setColor(client.config.embedColor)
               .setDescription('Timeout Use command again!'.replace("{name}", name))
-              .setFooter({ text: 'YouTube - RTX GAMING' })
+              .setFooter({ text: 'Chill with Z A I I K Y' })
             return interaction.editReply({ embeds: [embed], components: [button] }).catch(e => { })
 
           })
@@ -501,13 +501,13 @@ await interaction.editReply({
           .setAuthor({
             name: 'Your Albums',
             iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1213422313035407360/8218-alert.gif',
-            url: 'https://discord.gg/FUEHs7RCqz'
+            url: 'https://discord.gg/MsNYkPPUcp'
           })
           .setColor(client.config.embedColor)
           .setDescription(`\n${playlist?.playlist?.map(data =>
             `\n**${number++} |** \`${data.name}\` - **${playlist?.musics?.filter(m => m.playlist_name === data.name)?.length || 0}** plays (<t:${Math.floor(data.createdTime / 1000) }:R>)`
           ) }`)
-          .setFooter({ text: 'YouTube - RTX GAMING' })
+          .setFooter({ text: 'Chill with Z A I I K Y' })
         return interaction.reply({ embeds: [embed] }).catch(e => { }) 
 
       }
@@ -565,7 +565,7 @@ await interaction.editReply({
             .setAuthor({
               name: 'Top Albums',
               iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1213422313035407360/8218-alert.gif',
-              url: 'https://discord.gg/FUEHs7RCqz'
+              url: 'https://discord.gg/MsNYkPPUcp'
             })
             .setThumbnail(interaction.user.displayAvatarURL({ size: 2048, dynamic: true }))
             .setColor(client.config.embedColor)
@@ -644,12 +644,12 @@ await interaction.editReply({
               .setAuthor({
           name: 'Top Albums',
           iconURL: 'https://cdn.discordapp.com/attachments/1213421081226903552/1213422313035407360/8218-alert.gif',
-          url: 'https://discord.gg/FUEHs7RCqz'
+          url: 'https://discord.gg/MsNYkPPUcp'
         })
               .setThumbnail(interaction.user.displayAvatarURL({ size: 2048, dynamic: true }))
               .setColor(client.config.embedColor)
               .setDescription('TimeOut!')
-              .setFooter({ text: 'YouTube - RTX GAMING' })
+              .setFooter({ text: 'Chill with Z A I I K Y' })
             return interaction.editReply({ embeds: [embed], components: [button] }).catch(e => { })
 
           })
