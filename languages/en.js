@@ -143,7 +143,7 @@ playInputDescription: 'The link or name of the song or playlist',
 playNoInput: 'You need to provide the link or name of the song or playlist!',
 playNoVoiceChannel: 'You need to be in a voice channel to play music!',
 playNoPermissions: 'I need the permissions to join and speak in your voice channel!',
-playInProgress: 'Đang tìm kiếm: ',
+playInProgress: ' ',
 playError: 'Nhập lại 1 lần nữa nhé. (Hoặc nhập tên bài hát kèm tên ca sĩ nếu có)',
 // queue.js
 queueDescription: 'Show the current music queue',
