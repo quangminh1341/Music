@@ -46,8 +46,6 @@ async function executePlay(interaction, input) {
     }
 
     try {
-        await interaction.reply(`${lang.playInProgress} ${input}`);
-
         if (isPlaylist(input)) {
             await interaction.client.distube.playlist(voiceChannel, input, {
                 textChannel: interaction.channel,
