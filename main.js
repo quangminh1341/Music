@@ -204,16 +204,16 @@ client.distube
                 const embed = {
                     color: 0xDC92FF, 
                     author: {
-                        name: 'Now playing', 
-                        url: 'https://discord.gg/xQF9f9yUEM',
+                        name: 'Đang phát.../', 
+                        url: 'https://discord.gg/fTfamNb3mS',
                         icon_url: musicIcons.playerIcon 
                     },
-                    description: `- Song name: **${song.name}** \n- Duration: **${song.formattedDuration}**\n- Requested by: ${song.user}`,
+                    description: `- Bài hát: **${song.name}** \n- Thời lượng: **${song.formattedDuration}**\n- Yêu cầu bởi: ${song.user}`,
                     image: {
                         url: 'attachment://musicCard.png' 
                     },
                     footer: {
-                        text: 'Distube Player',
+                        text: 'Listening Alymee',
                         icon_url: musicIcons.footerIcon 
                     },
                     timestamp: new Date().toISOString() 
@@ -232,14 +232,14 @@ client.distube
                
                 const embed = {
                     color: 0xDC92FF,
-                    description: `**${song.name}** \n- Duration: **${song.formattedDuration}**\n- Added by: ${song.user}`,
+                    description: `**${song.name}** \n- Thời lượng: **${song.formattedDuration}**\n- Thêm bởi: ${song.user}`,
                     footer: {
-                        text: 'Distube Player',
+                        text: 'Listening Alymee',
                         icon_url: musicIcons.footerIcon 
                     },
                     author: {
-                        name: 'Song added sucessfully', 
-                        url: 'https://discord.gg/xQF9f9yUEM',
+                        name: 'Đã thêm bài hát mới', 
+                        url: 'https://discord.gg/fTfamNb3mS',
                         icon_url: musicIcons.correctIcon 
                     },
                     timestamp: new Date().toISOString() 
