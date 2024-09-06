@@ -1,5 +1,5 @@
 const musicIcons = {
-    footerIcon: 'https://cdn.discordapp.com/emojis/799859930181402645.gif', 
+    footerIcon: 'https://cdn.discordapp.com/attachments/1190834186085486668/1281554880648970292/Thiet_ke_chua_co_ten_4.png?ex=66dccd3d&is=66db7bbd&hm=6d5e0df228132a6d507bbce55126ae005d8f015a6c088c0332b87538deef2955&', 
     correctIcon: 'https://cdn.discordapp.com/emojis/819446784647757834.gif', 
     playerIcon: 'https://cdn.discordapp.com/emojis/763415718271385610.gif',
     wrongIcon: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236666647000125490/9596-wrong.gif?ex=667e0dd0&is=667cbc50&hm=5e30a7f4ad283075fb7430de42fb7985a13eac81f4323110272875ef007fb786&',
