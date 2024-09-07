@@ -7,7 +7,7 @@ module.exports = {
   
         const activities = [
             { name: '!mplay, /play', type: ActivityType.Playing },
-            { name: 'Alymee', type: ActivityType.Listening },
+            { name: 'Alymusic', type: ActivityType.Listening },
         ];
 
      
