@@ -6,7 +6,7 @@ module.exports = {
     execute(client) {
   
         const activities = [
-            { name: 'Black Myth: Wukong', type: ActivityType.Playing },
+            { name: '!mplay, /play', type: ActivityType.Playing },
             { name: 'Alymee', type: ActivityType.Listening },
         ];
 
