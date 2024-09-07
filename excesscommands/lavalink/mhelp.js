@@ -32,7 +32,7 @@ module.exports = {
             .setAuthor({ 
                 name: lang.lavalinkCommandsTitle, 
                 iconURL: musicIcons.beatsIcon,
-                url: "https://discord.gg/xQF9f9yUEM"
+                url: "https://discord.gg/fTfamNb3mS"
             })
             .setFooter({ text: lang.lavalinkPlayerFooter, iconURL: musicIcons.footerIcon });
 
