@@ -153,25 +153,25 @@ module.exports = {
                             page.author.iconURL = "https://cdn.discordapp.com/attachments/1230824451990622299/1253655047259160596/6186-developer-bot.gif?ex=66a9667f&is=66a814ff&hm=1494b63ccfaf2dae30a35af520fb748dd17e76195c206f2925b526595018c60f&";
                             break;
                         case 'moderation':
-                            page.image = "https://cdn.discordapp.com/attachments/1264134884432285766/1270352605154902151/GlaceYT.gif?ex=66b3638f&is=66b2120f&hm=23878b54affd61573b105db7c1c016eb730911dc762b3fbabac5a32cbc884119&";
+                            page.image = "https://cdn.discordapp.com/attachments/1190834186085486668/1281958821241032745/hinh-nen-anime-thumb.jpg?ex=66dd9cb0&is=66dc4b30&hm=1c2aa1f60b3651593aa7bc710f8fbb6f70c3c45e43c925a0ade14323cd66281c&";
                             page.color = "#ff0000";
                             page.thumbnail = "https://cdn.discordapp.com/attachments/1207890745684656160/1235546057627140108/Thiet_ke_chua_co_ten_4.png?ex=66dd836f&is=66dc31ef&hm=7f80c1ba7fd69cebad95fdb336f682f14e5600d5e7e92376a68c43940a1e7de4&";
                             page.author.iconURL = "https://cdn.discordapp.com/attachments/1230824451990622299/1253655047259160596/6186-developer-bot.gif?ex=66a9667f&is=66a814ff&hm=1494b63ccfaf2dae30a35af520fb748dd17e76195c206f2925b526595018c60f&";
                             break;
                         case 'utility':
-                            page.image = "https://cdn.discordapp.com/attachments/1264134884432285766/1270352605154902151/GlaceYT.gif?ex=66b3638f&is=66b2120f&hm=23878b54affd61573b105db7c1c016eb730911dc762b3fbabac5a32cbc884119&";
+                            page.image = "https://cdn.discordapp.com/attachments/1190834186085486668/1281959521966886984/147504818_212717427202561_4661425460422932982_n.jpg?ex=66dd9d57&is=66dc4bd7&hm=b25b946e5f070f66fe1b207b1f3405bd884c913f9d5da77d80eb7eb1b44edd06&";
                             page.color = "#00cc99";
                             page.thumbnail = "https://cdn.discordapp.com/attachments/1207890745684656160/1235546057627140108/Thiet_ke_chua_co_ten_4.png?ex=66dd836f&is=66dc31ef&hm=7f80c1ba7fd69cebad95fdb336f682f14e5600d5e7e92376a68c43940a1e7de4&";
                             page.author.iconURL = "https://cdn.discordapp.com/attachments/1230824451990622299/1253655047259160596/6186-developer-bot.gif?ex=66a9667f&is=66a814ff&hm=1494b63ccfaf2dae30a35af520fb748dd17e76195c206f2925b526595018c60f&";
                             break;
                         case 'distube music':
-                            page.image = "https://cdn.discordapp.com/attachments/1264134884432285766/1270352605154902151/GlaceYT.gif?ex=66b3638f&is=66b2120f&hm=23878b54affd61573b105db7c1c016eb730911dc762b3fbabac5a32cbc884119&";
+                            page.image = "https://cdn.discordapp.com/attachments/1190834186085486668/1281959760803008622/1333844.png?ex=66dd9d90&is=66dc4c10&hm=9adafd957f22366f6acb1a9cc600a9de3065a652f89955149a457e936e19d53a&";
                             page.color = "#ff0000";
                             page.thumbnail = "https://cdn.discordapp.com/attachments/1207890745684656160/1235546057627140108/Thiet_ke_chua_co_ten_4.png?ex=66dd836f&is=66dc31ef&hm=7f80c1ba7fd69cebad95fdb336f682f14e5600d5e7e92376a68c43940a1e7de4&";
                             page.author.iconURL = "https://cdn.discordapp.com/attachments/1230824451990622299/1253655047259160596/6186-developer-bot.gif?ex=66a9667f&is=66a814ff&hm=1494b63ccfaf2dae30a35af520fb748dd17e76195c206f2925b526595018c60f&";
                             break;
                         case 'setups':
-                            page.image = "https://cdn.discordapp.com/attachments/1264134884432285766/1270352605154902151/GlaceYT.gif?ex=66b3638f&is=66b2120f&hm=23878b54affd61573b105db7c1c016eb730911dc762b3fbabac5a32cbc884119&";
+                            page.image = "https://images8.alphacoders.com/133/1339294.png";
                             page.color = "#ff0000";
                             page.thumbnail = "https://cdn.discordapp.com/attachments/1207890745684656160/1235546057627140108/Thiet_ke_chua_co_ten_4.png?ex=66dd836f&is=66dc31ef&hm=7f80c1ba7fd69cebad95fdb336f682f14e5600d5e7e92376a68c43940a1e7de4&";
                             page.author.iconURL = "https://cdn.discordapp.com/attachments/1230824451990622299/1253655047259160596/6186-developer-bot.gif?ex=66a9667f&is=66a814ff&hm=1494b63ccfaf2dae30a35af520fb748dd17e76195c206f2925b526595018c60f&";
