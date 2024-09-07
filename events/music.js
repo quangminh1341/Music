@@ -62,13 +62,13 @@ module.exports = (client) => {
 
                 const embed = new EmbedBuilder()
                     .setAuthor({
-                        name: "Now playing",
+                        name: "Đang phát.../",
                         iconURL: musicIcons.playerIcon,
-                        url: "https://discord.gg/xQF9f9yUEM"
+                        url: "https://discord.gg/fTfamNb3mS"
                     })
-                    .setDescription(`- Song name :**${track.title}**\n- Author :**${track.author}**`)
+                    .setDescription(`- Bài hát :**${track.title}**\n- Tác giả :**${track.author}**`)
                     .setImage('attachment://musicard.png')
-                    .setFooter({ text: 'Lavalink Player', iconURL: musicIcons.footerIcon })
+                    .setFooter({ text: 'Listening Alymee', iconURL: musicIcons.footerIcon })
                     .setColor('#FF00FF');
 
                 const attachment = new AttachmentBuilder('musicard.png', { name: 'musicard.png' });
@@ -83,12 +83,12 @@ module.exports = (client) => {
             const channel = client.channels.cache.get(player.textChannel);
             const embed = new EmbedBuilder()
                 .setAuthor({
-                    name: "Queue is Empty",
+                    name: "Danh sách phát trống",
                     iconURL: musicIcons.beatsIcon,
-                    url: "https://discord.gg/xQF9f9yUEM"
+                    url: "https://discord.gg/fTfamNb3mS"
                 })
-                .setDescription('**Leaving voice channel!**')
-                .setFooter({ text: 'Lavalink Player', iconURL: musicIcons.footerIcon })
+                .setDescription('**Đã rời kênh thoại!**')
+                .setFooter({ text: 'Listening Alymee', iconURL: musicIcons.footerIcon })
                 .setColor('#FFFF00');
             channel.send({ embeds: [embed] });
             player.destroy();
