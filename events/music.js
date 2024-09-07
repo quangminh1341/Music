@@ -66,7 +66,7 @@ module.exports = (client) => {
                         iconURL: musicIcons.playerIcon,
                         url: "https://discord.gg/fTfamNb3mS"
                     })
-                    .setDescription(`- Bài hát :**${track.title}**\n- Tác giả :**${track.author}**`)
+                    .setDescription(`- Bài hát: **${track.title}**\n- Tác giả: **${track.author}**`)
                     .setImage('attachment://musicard.png')
                     .setFooter({ text: 'Listening Alymee', iconURL: musicIcons.footerIcon })
                     .setColor('#FF00FF');
