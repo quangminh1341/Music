@@ -20,7 +20,7 @@ module.exports = {
             .setAuthor({ 
                 name: lang.removedSongTitle, 
                 iconURL: musicIcons.skipIcon,
-                url: "https://discord.gg/xQF9f9yUEM"
+                url: "https://discord.gg/fTfamNb3mS"
             })
             .setFooter({ text: lang.footerText, iconURL: musicIcons.footerIcon })
             .setDescription(`${lang.removedSongText} ${removed[0].title}`);
