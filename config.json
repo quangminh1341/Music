@@ -22,7 +22,7 @@
     },
     "lavalink": {
         "lavalink": {
-            "host": "lava1.horizxon.studio",
+            "host": "lava4.horizxon.studio",
             "port": 80,
             "password": "horizxon.studio",
             "secure": false
