@@ -22,10 +22,10 @@
     },
     "lavalink": {
         "lavalink": {
-            "host": "v3.lavalink.rocks",
-            "port": 443,
-            "password": "horizxon.tech",
-            "secure": true
+            "host": "lava3.horizxon.studio",
+            "port": 80,
+            "password": "horizxon.studio",
+            "secure": false
         }
     },
     "spotifyClientId": "f71a3da30e254962965ca2a89d6f74b9",
