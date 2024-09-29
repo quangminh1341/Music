@@ -22,11 +22,9 @@
     },
     "lavalink": {
         "lavalink": {
-            "host": "lava-v3.ajieblogs.eu.org",
+            "host": "lavalinkv4-id.serenetia.com",
             "port": 443,
-            "password": "https://dsc.gg/ajidevserver",
-            "reconnectTimeout": 5000,
-            "reconnectTries": Infinity,
+            "password": "BatuManaBisa",
             "secure": true
         }
     },
