@@ -22,9 +22,9 @@
     },
     "lavalink": {
         "lavalink": {
-            "host": "lava-v3.ajieblogs.eu.org",
+            "host": "lavalinkv3-id.serenetia.com",
             "port": 80,
-            "password": "https://dsc.gg/ajidevserver",
+            "password": "BatuManaBisa",
             "secure": false
         }
     },
