@@ -71,7 +71,7 @@ module.exports = {
                     url: "http://mxt.kesug.com"
                 })
                 .setDescription(lang.volumeSuccessMessage.replace('{volumeLevel}', volumeLevel))
-                .setFooter({ text: 'DisTube Player', iconURL: musicIcons.footerIcon });
+                .setFooter({ text: 'http://mxt.kesug.com', iconURL: musicIcons.footerIcon });
 
             return source.channel.send({ embeds: [volumeEmbed] });
         } catch (error) {
