@@ -1,6 +1,6 @@
 {
     "token": "",
-    "language": "vn",
+    "language": "en",
     "prefix": "!",
     "mongodbUri": "mongodb+srv://zaiiky:101092603aA@cluster0.755oc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     "geniusToken": "0CHr9jtPjR7EKraXUVv6__8ELmEwFeUwt5vYAhk-is_fGOq-10-epdMzESkMPUnf",
