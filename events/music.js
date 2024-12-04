@@ -66,11 +66,18 @@ module.exports = (client) => {
 
                 // Sending an embed with the song details and card image
                 const embed = new EmbedBuilder()
-                    .setAuthor({ name: "Now Streaming", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
-                    .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
-                    .setImage('attachment://songcard.png')
-                    .setFooter({ text: 'Let the Beat Drop!', iconURL: musicIcons.footerIcon })
-                    .setColor('#FF00FF');
+                    .setColor(0x0000FF)
+                .setAuthor({ 
+                    name: lang.nowPlayingTitle, 
+                    iconURL: musicIcons.playerIcon,
+                    url: "http://mxt.kesug.com"
+                })
+                .setDescription(`- ${lang.nowPlayingDescriptionText}\n[${currentSong.name}](${currentSong.url})`)
+                .setFooter({ text: lang.nowPlayingFooterText, iconURL: musicIcons.footerIcon })
+                .addFields(
+                    { name: lang.nowPlayingDuration, value: currentSong.formattedDuration },
+                    { name: lang.nowPlayingRequestedBy, value: currentSong.user.username }
+                );
 
                 const buttonsRow = new ActionRowBuilder().addComponents(
                     new ButtonBuilder().setCustomId('volume_up').setEmoji('🔊').setStyle(ButtonStyle.Secondary),
