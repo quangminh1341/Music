@@ -88,11 +88,11 @@ module.exports = (client) => {
             const channel = client.channels.cache.get(player.textChannel);
             const embed = new EmbedBuilder()
                 .setAuthor({
-                    name: "Queue is Empty",
+                    name: "Danh sách phát trống",
                     iconURL: musicIcons.alertIcon,
                     url: "http://mxt.kesug.com"
                 })
-                .setDescription('**Leaving voice channel!**')
+                .setDescription('**Đã rời khỏi Voice!**')
                 .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                 .setColor('#FFFF00');
             channel.send({ embeds: [embed] });
