@@ -56,7 +56,7 @@ module.exports = (client) => {
                     thumbnailURL: track.info.thumbnail,
                     songTitle: track.info.title,
                     songArtist: track.info.author,
-                    trackRequester: "@All In One", // Displaying the username of who requested the song
+                    trackRequester: "mxt Music", // Displaying the username of who requested the song
                     fontPath: path.join(__dirname, "../UI", "fonts", "AfacadFlux-Regular.ttf"), // Your custom font
                 });
 
@@ -65,19 +65,36 @@ module.exports = (client) => {
                 });
 
                 // Sending an embed with the song details and card image
-                const embed = new EmbedBuilder()
-                    .setColor(0x0000FF)
-                .setAuthor({ 
-                    name: lang.nowPlayingTitle, 
-                    iconURL: musicIcons.playerIcon,
-                    url: "http://mxt.kesug.com"
-                })
-                .setDescription(`- ${lang.nowPlayingDescriptionText}\n[${currentSong.name}](${currentSong.url})`)
-                .setFooter({ text: lang.nowPlayingFooterText, iconURL: musicIcons.footerIcon })
-                .addFields(
-                    { name: lang.nowPlayingDuration, value: currentSong.formattedDuration },
-                    { name: lang.nowPlayingRequestedBy, value: currentSong.user.username }
+                 const embed = new EmbedBuilder()
+                    .setAuthor({ name: "Now Streaming", iconURL: musicIcons.playerIcon, url: "https://discord.gg/xQF9f9yUEM" })
+                    .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
+                    .setImage('attachment://songcard.png')
+                    .setFooter({ text: 'Let the Beat Drop!', iconURL: musicIcons.footerIcon })
+                    .setColor('#FF00FF');
+
+                const buttonsRow = new ActionRowBuilder().addComponents(
+                    new ButtonBuilder().setCustomId('volume_up').setEmoji('🔊').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('volume_down').setEmoji('🔉').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('pause').setEmoji('⏸️').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('resume').setEmoji('▶️').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('skip').setEmoji('⏭️').setStyle(ButtonStyle.Secondary)
                 );
+
+                const buttonsRow2 = new ActionRowBuilder().addComponents(
+                    new ButtonBuilder().setCustomId('stop').setEmoji('⏹️').setStyle(ButtonStyle.Danger),
+                    new ButtonBuilder().setCustomId('clear_queue').setEmoji('🗑️').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('show_queue').setEmoji('📜').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('shuffle').setEmoji('🔀').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('loop').setEmoji('🔁').setStyle(ButtonStyle.Secondary)
+                );
+
+                const message = await channel.send({
+                    embeds: [embed],
+                    files: [attachment],
+                    components: [buttonsRow, buttonsRow2]
+                });
+
+                player.currentMessageId = message.id;
                 
             } catch (error) {
                 console.error('Error creating or sending song card:', error);
