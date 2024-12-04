@@ -567,9 +567,9 @@ originalTextLabel: 'Original Text:',
 translatedTextLabel: 'Translated Text ({language}):',
 translationError: 'Failed to translate text. Please try again.',
 // mhelp2.js
-mhelpDescription: 'List available music commands',
+mhelpDescription: 'Danh sách lệnh',
 noCommandsFound: 'No music commands found.',
-lavalinkCommandsTitle: 'Lavalink Commands',
+lavalinkCommandsTitle: 'Music Command',
 lavalinkPlayerFooter: 'Powered by mxt.kesug.com',
 // mnp.js
 nowPlayingTitle: 'Now Playing..',
