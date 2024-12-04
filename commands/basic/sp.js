@@ -3,7 +3,7 @@ const lang = require('../../events/loadLanguage');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('support')
+        .setName('never1')
         .setDescription(lang.supportDescription),
     async execute(interaction) {
         const supportServerLink = lang.supportServerLink;
