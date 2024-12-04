@@ -66,10 +66,10 @@ module.exports = (client) => {
 
                 // Sending an embed with the song details and card image
                  const embed = new EmbedBuilder()
-                    .setAuthor({ name: "Now Streaming", iconURL: musicIcons.playerIcon, url: "https://discord.gg/xQF9f9yUEM" })
+                    .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
                     .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
                     .setImage('attachment://songcard.png')
-                    .setFooter({ text: 'Let the Beat Drop!', iconURL: musicIcons.footerIcon })
+                    .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                     .setColor('#FF00FF');
 
                 const buttonsRow = new ActionRowBuilder().addComponents(
