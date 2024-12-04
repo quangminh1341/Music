@@ -61,14 +61,14 @@ module.exports = (client) => {
                 });
 
                 const attachment = new AttachmentBuilder(cardImage, {
-                    name: 'songcard.png',
+                    name: 'musicCard.png',
                 });
 
                 // Sending an embed with the song details and card image
                  const embed = new EmbedBuilder()
                     .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
                     .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
-                    .setImage('attachment://songcard.png')
+                    .setImage('attachment://musicCard.png')
                     .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                     .setColor('#FF00FF');
 
