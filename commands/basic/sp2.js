@@ -10,7 +10,7 @@ const excessCommands = config.excessCommands;
 const cmdIcons = require('../../UI/icons/commandicons');
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('help')
+        .setName('never2')
         .setDescription('Displays a list of commands'),
 
     async execute(interaction) {
