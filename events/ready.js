@@ -7,6 +7,7 @@ module.exports = {
   
         const activities = [
             { name: 'mxt.kesug.com', type: ActivityType.Watching },
+            { name: '!mplay', type: ActivityType.Listening },
         ];
 
      
