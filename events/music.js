@@ -52,43 +52,23 @@ module.exports = (client) => {
                 }
 
                 // Creating song card with songcard package
-                const data = require('./UI/banners/musicard'); 
-
-                async function generateMusicCard(song) {
-                    try {
-
-                        const randomIndex = Math.floor(Math.random() * data.backgroundImages.length);
-                        const backgroundImage = data.backgroundImages[randomIndex];
-
-                        const musicCard = await Dynamic({
-                            thumbnailImage: song.thumbnail,
-                            name: song.name,
-                            author: song.formattedDuration,
-                            authorColor: "#FF7A00",
-                            progress: 50,
-                            imageDarkness: 60,
-                            backgroundImage: backgroundImage,
-                            nameColor: "#FFFFFF",
-                            progressColor: "#FF7A00",
-                            progressBarColor: "#5F2D00",
-                        });
-
-                        return musicCard;
-                    } catch (error) {
-                        console.error('Error generating music card:' error);
-                        throw error;
-                    }
-                }
-
-                 const attachment = new AttachmentBuilder(musicCard, {
-                    name: 'musicCard.png',
+                 const cardImage = await dynamicCard({
+                    thumbnailURL: track.info.thumbnail,
+                    songTitle: track.info.title,
+                    songArtist: track.info.author,
+                    trackRequester: "mxt Bot", // Displaying the username of who requested the song
+                    fontPath: path.join(__dirname, "../UI", "fonts", "AfacadFlux-Regular.ttf"), // Your custom font
                 });
-                
+
+                const attachment = new AttachmentBuilder(cardImage, {
+                    name: 'songcard.png',
+                });
+
                 // Sending an embed with the song details and card image
-                 const embed = new EmbedBuilder()
-                    .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
+                const embed = new EmbedBuilder()
+                    .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "https://discord.gg/xQF9f9yUEM" })
                     .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
-                    .setImage('attachment://musicCard.png')
+                    .setImage('attachment://songcard.png')
                     .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                     .setColor('#FF00FF');
 
