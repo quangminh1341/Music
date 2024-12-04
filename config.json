@@ -22,10 +22,10 @@
     },
      "lavalink": {
         "lavalink": {
-            "host": "lavalink.alfari.id",
-            "port": 443,
-            "password": "catfein",
-            "secure": true
+            "host": "lavahatry4.techbyte.host",
+            "port": 3000,
+            "password": "NAIGLAVA-dash.techbyte.host",
+            "secure": false
         }
     }, 
     "spotifyClientId": "f71a3da30e254962965ca2a89d6f74b9",
