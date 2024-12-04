@@ -6,7 +6,7 @@ const lang = require('../../events/loadLanguage');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('stop')
+        .setName('neverstop')
         .setDescription(lang.stopDescription),
 
     async execute(interaction) {
