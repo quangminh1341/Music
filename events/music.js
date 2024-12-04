@@ -79,6 +79,10 @@ module.exports = (client) => {
                         throw error;
                     }
                 }
+
+                 const attachment = new AttachmentBuilder(musicCard, {
+                    name: 'musicCard.png',
+                });
                 
                 // Sending an embed with the song details and card image
                  const embed = new EmbedBuilder()
