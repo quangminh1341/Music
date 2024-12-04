@@ -52,7 +52,7 @@ module.exports = (client) => {
                 }
 
                 // Creating song card with songcard package
-                 const cardImage = await dynamicCard({
+                const cardImage = await dynamicCard({
                     thumbnailURL: track.info.thumbnail,
                     songTitle: track.info.title,
                     songArtist: track.info.author,
@@ -66,7 +66,7 @@ module.exports = (client) => {
 
                 // Sending an embed with the song details and card image
                 const embed = new EmbedBuilder()
-                    .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "https://discord.gg/xQF9f9yUEM" })
+                    .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
                     .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
                     .setImage('attachment://songcard.png')
                     .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
@@ -105,11 +105,11 @@ module.exports = (client) => {
             const channel = client.channels.cache.get(player.textChannel);
             const embed = new EmbedBuilder()
                 .setAuthor({
-                    name: "Danh sách phát trống",
+                    name: "Danh sách trống",
                     iconURL: musicIcons.alertIcon,
-                    url: "http://mxt.kesug.com"
+                    url: ""
                 })
-                .setDescription('**Đã rời khỏi Voice!**')
+                .setDescription('**Đa rời Voice**')
                 .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                 .setColor('#FFFF00');
             channel.send({ embeds: [embed] });
