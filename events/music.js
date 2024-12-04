@@ -1,6 +1,6 @@
 const { EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const config = require('../config.json');
-const { dynamicCard } = require("musicard");
+const { dynamicCard } = require("songcard");
 const fs = require('fs');
 const path = require('path');
 const musicIcons = require('../UI/icons/musicicons');
