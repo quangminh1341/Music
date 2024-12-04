@@ -5,7 +5,7 @@ const lang = require('../../events/loadLanguage');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('skip')
+        .setName('neverskip')
         .setDescription(lang.skipDescription),
 
     async execute(interaction) {
