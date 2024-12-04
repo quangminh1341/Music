@@ -78,30 +78,6 @@ module.exports = (client) => {
                     { name: lang.nowPlayingDuration, value: currentSong.formattedDuration },
                     { name: lang.nowPlayingRequestedBy, value: currentSong.user.username }
                 );
-
-                const buttonsRow = new ActionRowBuilder().addComponents(
-                    new ButtonBuilder().setCustomId('volume_up').setEmoji('🔊').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('volume_down').setEmoji('🔉').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('pause').setEmoji('⏸️').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('resume').setEmoji('▶️').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('skip').setEmoji('⏭️').setStyle(ButtonStyle.Secondary)
-                );
-
-                const buttonsRow2 = new ActionRowBuilder().addComponents(
-                    new ButtonBuilder().setCustomId('stop').setEmoji('⏹️').setStyle(ButtonStyle.Danger),
-                    new ButtonBuilder().setCustomId('clear_queue').setEmoji('🗑️').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('show_queue').setEmoji('📜').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('shuffle').setEmoji('🔀').setStyle(ButtonStyle.Secondary),
-                    new ButtonBuilder().setCustomId('loop').setEmoji('🔁').setStyle(ButtonStyle.Secondary)
-                );
-
-                const message = await channel.send({
-                    embeds: [embed],
-                    files: [attachment],
-                    components: [buttonsRow, buttonsRow2]
-                });
-
-                player.currentMessageId = message.id;
                 
             } catch (error) {
                 console.error('Error creating or sending song card:', error);
