@@ -114,10 +114,10 @@ module.exports = (client) => {
                 .setAuthor({
                     name: "Queue is Empty",
                     iconURL: musicIcons.alertIcon,
-                    url: "https://discord.gg/xQF9f9yUEM"
+                    url: "http://mxt.kesug.com"
                 })
                 .setDescription('**Leaving voice channel!**')
-                .setFooter({ text: 'Let the Beat Drop!', iconURL: musicIcons.footerIcon })
+                .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                 .setColor('#FFFF00');
             channel.send({ embeds: [embed] });
             player.destroy();
