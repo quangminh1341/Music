@@ -52,18 +52,34 @@ module.exports = (client) => {
                 }
 
                 // Creating song card with songcard package
-                const cardImage = await dynamicCard({
-                    thumbnailURL: track.info.thumbnail,
-                    songTitle: track.info.title,
-                    songArtist: track.info.author,
-                    trackRequester: "mxt Music", // Displaying the username of who requested the song
-                    fontPath: path.join(__dirname, "../UI", "fonts", "AfacadFlux-Regular.ttf"), // Your custom font
-                });
+                const data = require('./UI/banners/musicard'); 
 
-                const attachment = new AttachmentBuilder(cardImage, {
-                    name: 'musicCard.png',
-                });
+                async function generateMusicCard(song) {
+                    try {
 
+                        const randomIndex = Math.floor(Math.random() * data.backgroundImages.length);
+                        const backgroundImage = data.backgroundImages[randomIndex];
+
+                        const musicCard = await Dynamic({
+                            thumbnailImage: song.thumbnail,
+                            name: song.name,
+                            author: song.formattedDuration,
+                            authorColor: "#FF7A00",
+                            progress: 50,
+                            imageDarkness: 60,
+                            backgroundImage: backgroundImage,
+                            nameColor: "#FFFFFF",
+                            progressColor: "#FF7A00",
+                            progressBarColor: "#5F2D00",
+                        });
+
+                        return musicCard;
+                    } catch (error) {
+                        console.error('Error generating music card:' error);
+                        throw error;
+                    }
+                }
+                
                 // Sending an embed with the song details and card image
                  const embed = new EmbedBuilder()
                     .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
