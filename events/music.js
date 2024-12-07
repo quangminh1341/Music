@@ -155,8 +155,8 @@ module.exports = (client) => {
                     break;
 
                 case 'clear_queue':
-                    player.queue.clear();
-                    interaction.reply({ content: 'Đã dọn dẹp Danh sách phát.', ephemeral: true });
+                    player.distube.toggleAutoplay();
+                    interaction.reply({ content: 'Đã bật autoplay.', ephemeral: true });
                     break;
 
                 case 'show_queue':
