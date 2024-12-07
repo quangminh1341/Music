@@ -155,7 +155,7 @@ module.exports = (client) => {
                     break;
 
                 case 'clear_queue':
-                    player.toggleAutoplay();
+                    player.autoplay();
                     interaction.reply({ content: 'Đã bật autoplay.', ephemeral: true });
                     break;
 
