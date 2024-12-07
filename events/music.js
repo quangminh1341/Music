@@ -177,7 +177,7 @@ module.exports = (client) => {
                         player.queue.shuffle();
                         interaction.reply({ content: 'Đã trộn các bài hát trong hàng chờ!', ephemeral: true });
                     } else {
-                        interaction.reply({ content: 'The queue is empty!', ephemeral: true });
+                        interaction.reply({ content: 'Danh sách phát trống!', ephemeral: true });
                     }
                     break;
 
