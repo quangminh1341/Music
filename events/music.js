@@ -126,42 +126,42 @@ module.exports = (client) => {
             switch (interaction.customId) {
                 case 'volume_up':
                     player.setVolume(Math.min(player.volume + 10, 100));
-                    interaction.reply({ content: 'Volume increased!', ephemeral: true });
+                    interaction.reply({ content: 'Âm lượng +10', ephemeral: true });
                     break;
 
                 case 'volume_down':
                     player.setVolume(Math.max(player.volume - 10, 0));
-                    interaction.reply({ content: 'Volume decreased!', ephemeral: true });
+                    interaction.reply({ content: 'Âm lượng -10', ephemeral: true });
                     break;
 
                 case 'pause':
                     player.pause(true);
-                    interaction.reply({ content: 'Player paused.', ephemeral: true });
+                    interaction.reply({ content: 'Đã tạm dừng.', ephemeral: true });
                     break;
 
                 case 'resume':
                     player.pause(false);
-                    interaction.reply({ content: 'Player resumed.', ephemeral: true });
+                    interaction.reply({ content: 'Đã phát trở lại.', ephemeral: true });
                     break;
 
                 case 'skip':
                     player.stop(); 
-                    interaction.reply({ content: 'Skipped to the next track.', ephemeral: true });
+                    interaction.reply({ content: 'Đã bỏ qua bài hát hiện tại.', ephemeral: true });
                     break;
 
                 case 'stop':
                     player.destroy(); 
-                    interaction.reply({ content: 'Stopped the music and disconnected.', ephemeral: true });
+                    interaction.reply({ content: 'Đã dừng phát và rời khỏi Voice.', ephemeral: true });
                     break;
 
                 case 'clear_queue':
                     player.queue.clear();
-                    interaction.reply({ content: 'Queue cleared.', ephemeral: true });
+                    interaction.reply({ content: 'Đã dọn dẹp Danh sách phát.', ephemeral: true });
                     break;
 
                 case 'show_queue':
                     if (!player || !player.queue.length) {
-                        return interaction.reply({ content: 'The queue is empty.', ephemeral: true });
+                        return interaction.reply({ content: 'Danh sách phát trống.', ephemeral: true });
                     }
                     const queueEmbed = new EmbedBuilder()
                         .setTitle('Current Music Queue')
@@ -175,7 +175,7 @@ module.exports = (client) => {
                 case 'shuffle':
                     if (player.queue.size > 0) {
                         player.queue.shuffle();
-                        interaction.reply({ content: 'The queue has been shuffled!', ephemeral: true });
+                        interaction.reply({ content: 'Đã trộn các bài hát trong hàng chờ!', ephemeral: true });
                     } else {
                         interaction.reply({ content: 'The queue is empty!', ephemeral: true });
                     }
