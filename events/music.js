@@ -67,7 +67,7 @@ module.exports = (client) => {
                 // Sending an embed with the song details and card image
                 const embed = new EmbedBuilder()
                     .setAuthor({ name: "Đang phát", iconURL: musicIcons.playerIcon, url: "http://mxt.kesug.com" })
-                    .setDescription(`- Song name: **${track.info.title}**\n- Duration: **${track.info.duration}**\n- Author: **${track.info.author}**`)
+                    .setDescription(`- Song name: **${track.info.title}**\n- Author: **${track.info.author}**`)
                     .setImage('attachment://songcard.png')
                     .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                     .setColor('#FF00FF');
