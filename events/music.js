@@ -110,6 +110,7 @@ module.exports = (client) => {
                     const nextTrack = await client.riffy.search(`ytmsearch:${player.queue.current.info.title}`, { requestedBy: player.requester });
                     if (nextTrack.tracks.length > 0) {
                         player.play(nextTrack.tracks[0]);
+                        channel.send({ content: `Đang phát tự động: **${nextTrack.tracks[0].info.title}**` });
                     } else {
                         channel.send({ content: 'Không còn bài nào để auto.' });
                     }
