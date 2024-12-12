@@ -115,6 +115,7 @@ module.exports = (client) => {
                     }
                 } catch (error) {
                     console.error('Error fetching autoplay track:', error);
+                    channel.send({ content: 'Lỗi trong khi tìm kiếm bài hát tiếp theo.' });
                 }
             } else {
                 const embed = new EmbedBuilder()
@@ -135,7 +136,6 @@ module.exports = (client) => {
             if (!interaction.isButton()) return;
 
             const player = client.riffy.players.get(interaction.guildId);
-            // if (!player) return interaction.reply({ content: 'No active player!', ephemeral: true });
 
             // Handle button interactions
             switch (interaction.customId) {
