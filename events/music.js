@@ -82,7 +82,7 @@ module.exports = (client) => {
 
                 const buttonsRow2 = new ActionRowBuilder().addComponents(
                     new ButtonBuilder().setCustomId('stop').setEmoji('⏹️').setStyle(ButtonStyle.Danger),
-                    new ButtonBuilder().setCustomId('clear_queue').setEmoji('🗑️').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('autoplay').setEmoji('❤️').setStyle(ButtonStyle.Secondary),
                     new ButtonBuilder().setCustomId('show_queue').setEmoji('📜').setStyle(ButtonStyle.Secondary),
                     new ButtonBuilder().setCustomId('shuffle').setEmoji('🔀').setStyle(ButtonStyle.Secondary),
                     new ButtonBuilder().setCustomId('loop').setEmoji('🔁').setStyle(ButtonStyle.Secondary)
@@ -101,21 +101,34 @@ module.exports = (client) => {
             }
         });
 
-        client.riffy.on('queueEnd', (player) => {
+        client.riffy.on('queueEnd', async (player) => {
             const channel = client.channels.cache.get(player.textChannel);
-            const embed = new EmbedBuilder()
-                .setAuthor({
-                    name: "Danh sách trống",
-                    iconURL: musicIcons.alertIcon,
-                    url: ""
-                })
-                .setDescription('**Đa rời Voice**')
-                .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
-                .setColor('#FFFF00');
-            channel.send({ embeds: [embed] });
 
-            player.autoplay();
-            player.play();
+            // Autoplay: check if enabled and play next track
+            if (player.autoplay) {
+                try {
+                    const nextTrack = await client.riffy.search(`ytmsearch:${player.queue.current.info.title}`, { requestedBy: player.requester });
+                    if (nextTrack.tracks.length > 0) {
+                        player.play(nextTrack.tracks[0]);
+                    } else {
+                        channel.send({ content: 'Không còn bài nào để auto.' });
+                    }
+                } catch (error) {
+                    console.error('Error fetching autoplay track:', error);
+                }
+            } else {
+                const embed = new EmbedBuilder()
+                    .setAuthor({
+                        name: "Danh sách trống",
+                        iconURL: musicIcons.alertIcon,
+                        url: "http://mxt.kesug.com"
+                    })
+                    .setDescription('**Đã rời kênh thoại**')
+                    .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
+                    .setColor('#FFFF00');
+                channel.send({ embeds: [embed] });
+                player.destroy();
+            }
         });
 
         client.on('interactionCreate', async (interaction) => {
@@ -156,12 +169,9 @@ module.exports = (client) => {
                     interaction.reply({ content: 'Đã dừng phát và rời khỏi Voice.', ephemeral: true });
                     break;
 
-                case 'clear_queue':
-                    if (player.queue.length === 0) {
-                       player.autoplay();
-                       player.play();
-                       interaction.reply({ content: 'Đã bật autoplay và tìm bài hát tiếp theo.', ephemeral: true });
-                    }
+                case 'autoplay':
+                    player.autoplay = !player.autoplay;
+                    interaction.reply({ content: `Autoplay is now **${player.autoplay ? 'enabled' : 'disabled'}**.`, ephemeral: true });
                     break;
 
                 case 'show_queue':
