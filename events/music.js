@@ -160,7 +160,7 @@ module.exports = (client) => {
                     if (player.queue.length === 0) {
                        player.autoplay();
                        interaction.reply({ content: 'Đã bật autoplay và tìm bài hát tiếp theo.', ephemeral: true });
-    }
+                    }
                     break;
 
                 case 'show_queue':
