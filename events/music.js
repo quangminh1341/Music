@@ -113,7 +113,9 @@ module.exports = (client) => {
                 .setFooter({ text: 'Powered by mxt.kesug.com', iconURL: musicIcons.footerIcon })
                 .setColor('#FFFF00');
             channel.send({ embeds: [embed] });
-            player.destroy();
+
+            player.autoplay();
+            player.play();
         });
 
         client.on('interactionCreate', async (interaction) => {
