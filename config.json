@@ -22,9 +22,9 @@
     },
      "lavalink": {
         "lavalink": {
-            "host": "lavalink.alfari.id",
+            "host": "lava-v3.ajieblogs.eu.org",
             "port": 443,
-            "password": "catfein",
+            "password": "https://dsc.gg/ajidevserver",
             "secure": true
         }
     }, 
