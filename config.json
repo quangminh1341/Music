@@ -22,9 +22,9 @@
     },
      "lavalink": {
         "lavalink": {
-            "host": "lava.link",
-            "port": 80,
-            "password": "MBn",
+            "host": "lava.inzeworld.com",
+            "port": 3128,
+            "password": "saher.inzeworld.com",
             "secure": false
         }
     }, 
